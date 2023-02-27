@@ -16,8 +16,8 @@ spec:
     spec:
       containers:
       - name: flask-backend
-        image: lyzhang1999/backend:latest
-        imagePullPolicy: Always
+        image: walk1ng/backend:main-96a52c6
+        imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 5000
         env:

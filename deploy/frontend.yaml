@@ -16,8 +16,8 @@ spec:
     spec:
       containers:
       - name: react-frontend
-        image: lyzhang1999/frontend:latest
-        imagePullPolicy: Always
+        image: walk1ng/frontend:main-edb270d
+        imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 3000
         resources:
