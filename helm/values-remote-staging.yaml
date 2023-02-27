@@ -1,13 +1,13 @@
 frontend:
   autoscaling:
-    averageUtilization: 50
+    averageUtilization: 55
 
 backend:
   autoscaling:
-    averageUtilization: 40
+    averageUtilization: 44
 
 database:
-  enabled: false
+  enabled: true
   uri: 10.10.10.10
   username: external_postgres
   password: external_postgres

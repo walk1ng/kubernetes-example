@@ -5,7 +5,6 @@ metadata:
   labels:
     app: backend
 spec:
-  # Answer of lesson 22
   replicas: 1
   selector:
     matchLabels:
@@ -18,16 +17,16 @@ spec:
       containers:
       - name: flask-backend
         image: "{{ .Values.backend.image }}:{{ .Values.backend.tag }}"
-        imagePullPolicy: Always
+        imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 5000
         env:
         - name: DATABASE_URI
-          value: "{{ .Values.database.uri }}"
+          value: {{ .Values.database.uri }}
         - name: DATABASE_USERNAME
-          value: "{{ .Values.database.username }}"
+          value: {{ .Values.database.username }}
         - name: DATABASE_PASSWORD
-          value: "{{ .Values.database.password }}"
+          value: {{ .Values.database.password}}
         resources:
           requests:
             memory: "128Mi"

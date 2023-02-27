@@ -5,7 +5,6 @@ metadata:
   labels:
     app: frontend
 spec:
-  # do not include replicas in the manifests if you want replicas to be controlled by HPA
   replicas: 1
   selector:
     matchLabels:
@@ -18,7 +17,7 @@ spec:
       containers:
       - name: react-frontend
         image: "{{ .Values.frontend.image }}:{{ .Values.frontend.tag }}"
-        imagePullPolicy: Always
+        imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 3000
         resources:

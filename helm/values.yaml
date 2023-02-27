@@ -1,16 +1,17 @@
-frontend:
-  image: lyzhang1999/frontend
-  tag: '1276e23'
-  autoscaling:
-    averageUtilization: 90
 backend:
-  image: lyzhang1999/backend
-  tag: '1276e23'
+  image: walk1ng/backend
+  tag: main-96a52c6
   autoscaling:
     averageUtilization: 90
+
+frontend:
+  image: walk1ng/frontend
+  tag: main-edb270d
+  autoscaling:
+    averageUtilization: 90
+
 database:
   enabled: true
   uri: pg-service
   username: postgres
   password: postgres
-  
