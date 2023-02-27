@@ -36,9 +36,3 @@ spec:
         target:
           type: Utilization
           averageUtilization: {{ .Values.backend.autoscaling.averageUtilization }}
-    - type: Resource
-      resource:
-        name: memory
-        target:
-          type: Utilization
-          averageUtilization: 50
