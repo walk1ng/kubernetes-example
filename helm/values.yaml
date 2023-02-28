@@ -1,12 +1,12 @@
 backend:
   image: walk1ng/backend
-  tag: main-96a52c6
+  tag: latest
   autoscaling:
     averageUtilization: 90
 
 frontend:
   image: walk1ng/frontend
-  tag: main-edb270d
+  tag: latest
   autoscaling:
     averageUtilization: 90
 
