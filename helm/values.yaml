@@ -1,11 +1,11 @@
 backend:
   image: walk1ng/backend
-  tag: b56c8d3
+  tag: 328ef8f
   autoscaling:
     averageUtilization: 90
 frontend:
   image: walk1ng/frontend
-  tag: b56c8d3
+  tag: 328ef8f
   autoscaling:
     averageUtilization: 90
 database:
