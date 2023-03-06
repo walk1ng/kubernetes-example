@@ -10,7 +10,7 @@ spec:
     - http:
         paths:
           - path: /{{ .Release.Namespace }}
-            pathType: Prefix
+            pathType: Exact
             backend:
               service:
                 name: frontend-service
